@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <title>Orbit People — Leave management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#" aria-label="Orbit People home">
+          <span class="brand-mark"><span></span><span></span><span></span><span></span></span>
+          <span>orbit<span class="brand-light">people</span></span>
+        </a>
+        <div class="workspace-label">WORKSPACE</div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-link active" data-page="dashboard"><span class="nav-icon">◫</span>Overview</button>
+          <button class="nav-link" data-page="requests"><span class="nav-icon">▤</span>Leave requests <span class="nav-count" id="nav-pending">0</span></button>
+          <button class="nav-link" data-page="employees"><span class="nav-icon">♙</span>People</button>
+          <button class="nav-link" data-page="calendar"><span class="nav-icon">▦</span>Calendar</button>
+          <button class="nav-link" data-page="reports"><span class="nav-icon">▥</span>Reports</button>
+        </nav>
+        <div class="sidebar-spacer"></div>
+        <div class="sidebar-tip">
+          <span class="tip-spark">✳</span>
+          <strong>People first, always.</strong>
+          <p>A little time off goes a long way.</p>
+        </div>
+        <button class="nav-link settings-link" data-page="settings"><span class="nav-icon">⚙</span>Settings</button>
+        <div class="sidebar-profile">
+          <div class="avatar avatar-indigo">AM</div>
+          <div class="profile-copy"><strong>Alex Morgan</strong><span>HR Administrator</span></div>
+          <button class="more-button" aria-label="Profile options">···</button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <button class="mobile-menu" id="menu-toggle" aria-label="Open navigation">☰</button>
+          <div class="breadcrumb"><span>Workspace</span><span class="crumb-slash">/</span><strong id="page-crumb">Overview</strong></div>
+          <div class="topbar-actions">
+            <label class="search-box">
+              <span class="search-icon">⌕</span>
+              <input id="global-search" type="search" placeholder="Search anything..." autocomplete="off" />
+              <kbd>⌘ K</kbd>
+            </label>
+            <button class="icon-button notification-button" id="notifications-button" aria-label="Notifications">♧<i></i></button>
+            <div class="topbar-divider"></div>
+            <button class="profile-trigger" aria-label="Open profile"><span class="avatar avatar-indigo">AM</span><span class="profile-chevron">⌄</span></button>
+          </div>
+        </header>
+        <div class="page-container" id="page-container"></div>
+      </main>
+    </div>
+    <div class="toast-region" id="toast-region" aria-live="polite"></div>
+    <div class="modal-backdrop" id="modal-backdrop" hidden>
+      <section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"></section>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
